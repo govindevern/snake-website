@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f8f5">
+  <meta name="description" content="Meet Snake: an independent programming language with its own lexer, parser, AST, and tree-walking interpreter.">
+  <title>Snake — A language of its own.</title>
+  <link rel="icon" href="snake-logo-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Snake home"><span class="brand-mark" aria-hidden="true"><img src="snake-logo-mark.svg" alt=""></span><span>Snake</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-links" aria-label="Open navigation"><span></span><span></span></button>
+      <div class="nav-links" id="primary-links">
+        <a href="index.html" aria-current="page">Home</a><a href="docs.html">Documentation</a><a href="index.html#examples">Examples</a><a href="downloads.html">Downloads</a><a class="nav-github" href="https://github.com/govindevern/snake" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark theme"><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 15.5A8.7 8.7 0 0 1 8.5 3.2 8.8 8.8 0 1 0 20.8 15.5Z"/></svg><span class="sr-only">Toggle color theme</span></button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" id="home">
+      <div class="hero-copy">
+        <div class="release-pill"><span class="status-dot"></span> Latest release <span class="pill-divider">·</span> v1.1.0</div>
+        <h1>Meet Snake<span class="accent-period">.</span></h1>
+        <p class="hero-lede">An independent programming language with a lexer, parser, AST, and tree-walking interpreter of its own.</p>
+        <div class="hero-actions"><a class="button button-primary" href="downloads.html">Download Snake <span>v1.1.0</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2.8v9.4m0 0 3.6-3.6M10 12.2 6.4 8.6M3.5 13.3v2.3c0 .8.6 1.4 1.4 1.4h10.2c.8 0 1.4-.6 1.4-1.4v-2.3"/></svg></a><a class="button button-secondary" href="docs.html">Explore documentation <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-meta"><span>Created by <strong>Govind Evern</strong></span><span class="meta-sep"></span><span>Windows x64 release</span></div>
+      </div>
+      <div class="hero-symbol"><img src="snake-logo.svg" alt="Snake logo: a bright green snake winding around a dark code cube"></div>
+    </section>
+
+    <section class="section code-section" aria-labelledby="code-title">
+      <div class="wrap showcase-grid">
+        <div class="section-intro"><span class="eyebrow">A first look</span><h2 id="code-title">A little Snake,<br>from the start.</h2><p>Variables, expressions, and output. A small language with room to grow.</p><a class="text-link" href="docs.html#syntax">Read the syntax guide <span aria-hidden="true">→</span></a></div>
+        <div class="code-card"><div class="code-top"><div class="window-dots"><i></i><i></i><i></i></div><span>hello.snake</span><button class="copy-button" type="button" data-copy="showcase-code"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M13 7V4.5A1.5 1.5 0 0 0 11.5 3h-7A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13H7"/></svg><span>Copy</span></button></div><pre class="code-block"><code id="showcase-code"><span class="kw">let</span> name = <span class="str">"Govind"</span>
+<span class="kw">show</span> <span class="str">"Hello, "</span> + name
+
+<span class="kw">let</span> x = <span class="num">10</span>
+<span class="kw">let</span> y = <span class="num">20</span>
+<span class="kw">show</span> x + y</code></pre><div class="output-preview"><span class="output-label"><span class="output-dot"></span> OUTPUT</span><code>Hello, Govind<br>30</code></div></div>
+      </div>
+    </section>
+
+    <section class="section features-section" id="features"><div class="wrap"><div class="section-heading"><span class="eyebrow">Under the hood</span><h2>Built from the language up.</h2><p>Snake’s core pieces are written for Snake, not borrowed from another language.</p></div><div class="feature-grid">
+      <article class="feature"><span class="feature-index">01</span><h3>Independent by design</h3><p>Snake source is interpreted directly by its own runtime. Programs aren’t translated into Python.</p></article>
+      <article class="feature"><span class="feature-index">02</span><h3>Lexer &amp; parser</h3><p>A hand-written lexer and recursive-descent parser turn source text into a program the runtime understands.</p></article>
+      <article class="feature"><span class="feature-index">03</span><h3>Snake AST</h3><p>Language-specific syntax nodes give expressions and statements a clear structure.</p></article>
+      <article class="feature"><span class="feature-index">04</span><h3>Tree-walking interpreter</h3><p>The interpreter evaluates the parsed syntax, with source-located errors and a default execution step limit.</p></article>
+      <article class="feature"><span class="feature-index">05</span><h3>Readable syntax</h3><p>Use <code>let</code>, <code>show</code>, <code>if … then</code>, and <code>to … do</code> to write programs in Snake.</p></article>
+      <article class="feature"><span class="feature-index">06</span><h3>Standalone for Windows</h3><p>The v1.1.0 Windows x64 release bundles the runtime, so end users don’t need Python installed.</p></article>
+    </div></div></section>
+
+    <section class="section example-section" id="examples"><div class="wrap"><div class="section-heading section-heading-row"><div><span class="eyebrow">Examples</span><h2>Small programs, clear ideas.</h2></div><a class="text-link" href="docs.html#examples">More examples in the docs <span aria-hidden="true">→</span></a></div><div class="example-grid">
+      <article class="example-card"><div class="example-head"><span class="example-number">01</span><h3>Hello, world</h3></div><p>Print a message with the <code>show</code> statement.</p><div class="mini-code"><pre><code><span class="kw">show</span> <span class="str">"Hello, Snake!"</span></code></pre><span class="mini-output">Hello, Snake!</span></div></article>
+      <article class="example-card"><div class="example-head"><span class="example-number">02</span><h3>Count a total</h3></div><p>Loop over a range and update a variable.</p><div class="mini-code"><pre><code><span class="kw">let</span> total = <span class="num">0</span>
+<span class="kw">for</span> n <span class="kw">in</span> range(<span class="num">1</span>, <span class="num">6</span>) <span class="kw">do</span>
+    total = total + n
+<span class="kw">end</span>
+<span class="kw">show</span> total</code></pre><span class="mini-output">15</span></div></article>
+    </div></div></section>
+
+    <section class="about-section"><div class="wrap about-inner"><div><span class="eyebrow">A project by Govind Evern</span><h2>Open source.<br>Open to explore.</h2></div><div class="about-copy"><p>Snake is an independent programming language project created by Govind Evern. Explore how it works, try the examples, or follow the project on GitHub.</p><div class="about-links"><a class="button button-dark" href="https://github.com/govindevern/snake" target="_blank" rel="noreferrer">Explore the source <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/govindevern/snake/issues" target="_blank" rel="noreferrer">Report an issue <span aria-hidden="true">↗</span></a></div></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-main"><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true"><img src="snake-logo-mark.svg" alt=""></span><span>Snake</span></a><p>A language of its own.</p><div class="footer-links"><a href="docs.html">Documentation</a><a href="downloads.html">Downloads</a><a href="https://github.com/govindevern/snake" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://github.com/govindevern/snake/blob/v1.1.0/LICENSE" target="_blank" rel="noreferrer">MIT License ↗</a></div></div><div class="wrap footer-bottom"><span>© <span data-year>2026</span> Govind Evern</span><span>Snake <strong>v1.1.0</strong></span></div></footer>
+</body>
+</html>

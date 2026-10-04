@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Snake programming language logo</title>
+  <desc id="desc">A bright green snake winds around a dark cube marked with code brackets.</desc>
+  <defs>
+    <linearGradient id="top" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#343934"/><stop offset="1" stop-color="#202420"/></linearGradient>
+    <linearGradient id="left" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#272c28"/><stop offset="1" stop-color="#171b18"/></linearGradient>
+    <linearGradient id="right" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#191d1a"/><stop offset="1" stop-color="#0e110f"/></linearGradient>
+    <linearGradient id="snake" x1=".15" y1="0" x2=".88" y2="1"><stop stop-color="#b4f45a"/><stop offset=".48" stop-color="#82d62d"/><stop offset="1" stop-color="#55a91f"/></linearGradient>
+    <filter id="shadow" x="-.2" y="-.2" width="1.4" height="1.5"><feGaussianBlur in="SourceAlpha" stdDeviation="9"/><feOffset dy="9"/><feComponentTransfer><feFuncA type="linear" slope=".4"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <path d="M256 54 447 151 256 250 65 151Z" fill="url(#top)" stroke="#414740" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M65 151 256 250v211L65 359Z" fill="url(#left)" stroke="#292e2a" stroke-width="3" stroke-linejoin="round"/>
+    <path d="m447 151-191 99v211l191-102Z" fill="url(#right)" stroke="#292e2a" stroke-width="3" stroke-linejoin="round"/>
+    <path d="m218 130-41 22 40 21m79-43 42 21-42 22m-23-58-36 77" fill="none" stroke="#91e63d" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M117 145c24 28 61 46 105 51 41 5 74-7 103-23 25-14 46-17 64-9 23 10 35 33 42 56" fill="none" stroke="url(#snake)" stroke-width="28" stroke-linecap="round"/>
+    <path d="M95 278c-5 34 9 55 39 72 26 15 49 28 56 56 8 32-3 59-29 79" fill="none" stroke="url(#snake)" stroke-width="28" stroke-linecap="round"/>
+    <path d="M423 270c24 26 24 57-1 81-18 17-41 24-57 39-18 18-23 46-39 67-19 25-50 35-77 24-25-10-40-34-39-63l1-43" fill="none" stroke="url(#snake)" stroke-width="31" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M250 407c2-24 12-43 29-55 18-12 41-11 53 2 13 13 13 33 1 49-9 12-22 20-34 31 20-3 37-14 49-31 16-22 22-54 45-68 14-9 31-13 43-26" fill="none" stroke="url(#snake)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M339 435c7-22 20-43 41-53 18-9 42-9 59-22 15-11 22-29 26-47" fill="none" stroke="url(#snake)" stroke-width="23" stroke-linecap="round"/>
+    <path d="M453 313c13-13 28-17 42-11-2 13-12 24-27 30l-20-1Z" fill="#8cdd39"/>
+    <circle cx="480" cy="311" r="2.6" fill="#18210f"/>
+    <path d="m492 325 11 4" fill="none" stroke="#8cdd39" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>
